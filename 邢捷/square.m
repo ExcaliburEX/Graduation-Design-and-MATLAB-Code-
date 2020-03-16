@@ -1,6 +1,6 @@
 A=xlsread('xinjie.xlsx','sheet1');
-%¸ù¾İ×Ô¼ºÊı¾İ´æ´¢µÄÂ·¾¶¸ü¸Ä
-%µÚÒ»ÁĞy£¬µÚ¶şÁĞx1
+%æ ¹æ®è‡ªå·±æ•°æ®å­˜å‚¨çš„è·¯å¾„æ›´æ”¹
+%ç¬¬ä¸€åˆ—yï¼Œç¬¬äºŒåˆ—x1
 n=length(A);
 y=A(:,1);
 x1=A(:,2);
@@ -11,20 +11,20 @@ set(gcf,'visible','off');
 set(gcf,'outerposition',get(0,'screensize'));
 plot(x1,y,'rp');
 rcoplot(r,rint);
-title('\fontname{ËÎÌå}²Ğ²îÍ¼»æÖÆ');
-xlabel('Êı¾İ');ylabel('²Ğ²î');
+title('\fontname{å®‹ä½“}æ®‹å·®å›¾ç»˜åˆ¶');
+xlabel('æ•°æ®');ylabel('æ®‹å·®');
 set(gca,'FontSize',30,'Fontname', 'Times New Roman');
-set(get(gca,'XLabel'),'Fontsize',30,'Fontname', 'ËÎÌå');
-set(get(gca,'YLabel'),'Fontsize',30,'Fontname', 'ËÎÌå');
+set(get(gca,'XLabel'),'Fontsize',30,'Fontname', 'å®‹ä½“');
+set(get(gca,'YLabel'),'Fontsize',30,'Fontname', 'å®‹ä½“');
 z=b(1)+b(2)*x1;
-print(gcf,'-dpng','-r300','²Ğ²îÍ¼»æÖÆ');
+print(gcf,'-dpng','-r300','æ®‹å·®å›¾ç»˜åˆ¶');
 figure;
 set(gcf,'visible','off');
 set(gcf,'outerposition',get(0,'screensize'));
 plot(x1,y,'rp',x1,z,'b');
-title('\fontname{ËÎÌå}É¢µãÍ¼¼°Æä»Ø¹éÏß');
+title('\fontname{å®‹ä½“}æ•£ç‚¹å›¾åŠå…¶å›å½’çº¿');
 set(gca,'FontSize',30,'Fontname', 'Times New Roman');
-set(get(gca,'XLabel'),'Fontsize',30,'Fontname', 'ËÎÌå');
-set(get(gca,'YLabel'),'Fontsize',30,'Fontname', 'ËÎÌå');
-print(gcf,'-dpng','-r300','É¢µãÍ¼¼°Æä»Ø¹éÏß');
+set(get(gca,'XLabel'),'Fontsize',30,'Fontname', 'å®‹ä½“');
+set(get(gca,'YLabel'),'Fontsize',30,'Fontname', 'å®‹ä½“');
+print(gcf,'-dpng','-r300','æ•£ç‚¹å›¾åŠå…¶å›å½’çº¿');
 b

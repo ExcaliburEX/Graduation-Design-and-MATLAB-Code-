@@ -1,4 +1,4 @@
-%调查问卷随机数据
+%璋冩煡闂嵎闅忔満鏁版嵁
  
 Q1 = [179 348 98];
 Q2 = [333 292];
@@ -15,4 +15,4 @@ Q5_ans = RandomBox(6,Q5);
 number = 1:625;
 data = [Q1_ans,Q2_ans,Q3_ans,Q4_ans,Q5_ans];
 group_cell = horzcat(number',data);
-xlswrite('数据.xlsx',group_cell,1);
+xlswrite('鏁版嵁.xlsx',group_cell,1);

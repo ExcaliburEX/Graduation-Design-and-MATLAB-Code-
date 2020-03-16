@@ -1,24 +1,24 @@
 function  Plot3D(x,y,z)
-mx=min(x);%ÇóxµÄ×îĞ¡Öµ
-Mx=max(x);%ÇóxµÄ×î´óÖµ
+mx=min(x);%æ±‚xçš„æœ€å°å€¼
+Mx=max(x);%æ±‚xçš„æœ€å¤§å€¼
 my=min(y);
 My=max(y);
-Nx=150; %¶¨ÒåxÖá²åÖµÊı¾İµãÊı£¬¸ù¾İÊµ¼ÊÇé¿öÈ·¶¨
-Ny=150;%¶¨ÒåyÖá²åÖµÊı¾İµãÊı£¬¸ù¾İÊµ¼ÊÇé¿öÈ·¶¨
-cx=linspace(mx,Mx,Nx);%ÔÚÔ­Ê¼xÊı¾İµÄ×î´óÖµ×îĞ¡ÖµÖ®¼äµÈ¼ä¸ôÉú³ÉNx¸ö²åÖµµã
-cy=linspace(my,My,Ny);%ÔÚÔ­Ê¼Êı¾İyµÄ×î´óÖµ×îĞ¡ÖµÖ®¼äµÈ¼ä¸ôÉú³ÉNy¸ö²åÖµµã
-cz=griddata(x,y,z,cx,cy','cubic');%µ÷ÓÃmatlabº¯Êı½øĞĞÁ¢·½²åÖµ
+Nx=150; %å®šä¹‰xè½´æ’å€¼æ•°æ®ç‚¹æ•°ï¼Œæ ¹æ®å®é™…æƒ…å†µç¡®å®š
+Ny=150;%å®šä¹‰yè½´æ’å€¼æ•°æ®ç‚¹æ•°ï¼Œæ ¹æ®å®é™…æƒ…å†µç¡®å®š
+cx=linspace(mx,Mx,Nx);%åœ¨åŸå§‹xæ•°æ®çš„æœ€å¤§å€¼æœ€å°å€¼ä¹‹é—´ç­‰é—´éš”ç”ŸæˆNxä¸ªæ’å€¼ç‚¹
+cy=linspace(my,My,Ny);%åœ¨åŸå§‹æ•°æ®yçš„æœ€å¤§å€¼æœ€å°å€¼ä¹‹é—´ç­‰é—´éš”ç”ŸæˆNyä¸ªæ’å€¼ç‚¹
+cz=griddata(x,y,z,cx,cy','cubic');%è°ƒç”¨matlabå‡½æ•°è¿›è¡Œç«‹æ–¹æ’å€¼
 figure;
 set(gcf,'outerposition',get(0,'screensize'));
-surfc(cx,cy,cz) %»æÖÆÇúÃæ
+surfc(cx,cy,cz) %ç»˜åˆ¶æ›²é¢
 set(gca,'FontSize',24,'Fontname', 'Times New Roman');
-xlabel('ºá×ø±ê(¹«Àï)');
-ylabel('×İ×ø±ê(¹«Àï)');
-zlabel('×Ü·¢ËÍ·ÑÓÃ');
+xlabel('æ¨ªåæ ‡(å…¬é‡Œ)');
+ylabel('çºµåæ ‡(å…¬é‡Œ)');
+zlabel('æ€»å‘é€è´¹ç”¨');
 set(gca,'looseInset',[0 0 0 0]);
-set(get(gca,'XLabel'),'Fontsize',20,'Fontname', 'ËÎÌå');
-set(get(gca,'YLabel'),'Fontsize',20,'Fontname', 'ËÎÌå');
-set(get(gca,'ZLabel'),'Fontsize',20,'Fontname', 'ËÎÌå');
+set(get(gca,'XLabel'),'Fontsize',20,'Fontname', 'å®‹ä½“');
+set(get(gca,'YLabel'),'Fontsize',20,'Fontname', 'å®‹ä½“');
+set(get(gca,'ZLabel'),'Fontsize',20,'Fontname', 'å®‹ä½“');
 colorbar;
 colormap(hsv);
-print(1,'-dpng','-r300','Ñ¡Ö·ÈıÎ¬Í¼');
+print(1,'-dpng','-r300','é€‰å€ä¸‰ç»´å›¾');

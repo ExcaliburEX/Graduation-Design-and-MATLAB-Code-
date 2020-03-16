@@ -1,4 +1,4 @@
-%²úÉúµ÷²éÎÊ¾íµÄËæ»úÊı¾İ£¬±£´æÔÚ'Êı¾İ.xlsx'ÖĞµÄMATLANB´úÂë
+%äº§ç”Ÿè°ƒæŸ¥é—®å·çš„éšæœºæ•°æ®ï¼Œä¿å­˜åœ¨'æ•°æ®.xlsx'ä¸­çš„MATLANBä»£ç 
 train_cost = [103,105,107];
 train_time = [120,150,160];
 train_interval = [60,120,150];
@@ -35,6 +35,6 @@ for i = 1:27
 end
 number = 1:27;
 group_cell = horzcat(number',group_cell);
-xlswrite('Êı¾İ.xlsx',group_cell,1);
+xlswrite('æ•°æ®.xlsx',group_cell,1);
     
 

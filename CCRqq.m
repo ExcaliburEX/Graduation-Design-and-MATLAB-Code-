@@ -18,7 +18,7 @@ for i=1:n;
     w(:,i)=linprog(f,A,b,Aeq,beq,LB,UB);
 end
 w
-lambda=w(1:n,:)            %Êä³ölambuda
-s_minus=w(n+1:m+n,:)       %Êä³ös+
-s_plus=w(n+m+1:n+m+s,:)    %Êä³ös-
-theta=w(n+m++s+1,:)        %Êä³ösita
+lambda=w(1:n,:)            %è¾“å‡ºlambuda
+s_minus=w(n+1:m+n,:)       %è¾“å‡ºs+
+s_plus=w(n+m+1:n+m+s,:)    %è¾“å‡ºs-
+theta=w(n+m++s+1,:)        %è¾“å‡ºsita

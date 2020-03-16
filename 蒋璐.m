@@ -49,33 +49,33 @@ figure(1);
 set(gcf,'outerposition',get(0,'screensize'));
 plot(HeartData(:),'b*-');
 set(gca,'FontSize',24,'Fontname', 'Times New Roman');
-xlabel('\fontname{ËÎÌå}Ê±¼ä/Ğ¡Ê±');
-ylabel('\fontname{ËÎÌå}ĞÄÂÊÖµ');
+xlabel('\fontname{å®‹ä½“}æ—¶é—´/å°æ—¶');
+ylabel('\fontname{å®‹ä½“}å¿ƒç‡å€¼');
 %set(gca,'looseInset',[0 0 0 0]);
-set(get(gca,'XLabel'),'Fontsize',20,'Fontname', 'ËÎÌå');
-set(get(gca,'YLabel'),'Fontsize',20,'Fontname', 'ËÎÌå');
-print(1,'-dpng','-r300','ĞÄÂÊÍ¼');
+set(get(gca,'XLabel'),'Fontsize',20,'Fontname', 'å®‹ä½“');
+set(get(gca,'YLabel'),'Fontsize',20,'Fontname', 'å®‹ä½“');
+print(1,'-dpng','-r300','å¿ƒç‡å›¾');
 
 figure(2);
 set(gcf,'outerposition',get(0,'screensize'));
 plot(HighPressData,'ro-');hold on;
 plot(LowPressData,'gd-');
 set(gca,'FontSize',24,'Fontname', 'Times New Roman');
-xlabel('\fontname{ËÎÌå}Ê±¼ä/Ğ¡Ê±');
-ylabel('\fontname{ËÎÌå}ÑªÑ¹Öµ');
+xlabel('\fontname{å®‹ä½“}æ—¶é—´/å°æ—¶');
+ylabel('\fontname{å®‹ä½“}è¡€å‹å€¼');
 %set(gca,'looseInset',[0 0 0 0]);
-set(get(gca,'XLabel'),'Fontsize',20,'Fontname', 'ËÎÌå');
-set(get(gca,'YLabel'),'Fontsize',20,'Fontname', 'ËÎÌå');
-legend('\fontname{ËÎÌå}¸ßÑªÑ¹','\fontname{ËÎÌå}µÍÑªÑ¹');
-print(2,'-dpng','-r300','ÑªÑ¹Í¼');
+set(get(gca,'XLabel'),'Fontsize',20,'Fontname', 'å®‹ä½“');
+set(get(gca,'YLabel'),'Fontsize',20,'Fontname', 'å®‹ä½“');
+legend('\fontname{å®‹ä½“}é«˜è¡€å‹','\fontname{å®‹ä½“}ä½è¡€å‹');
+print(2,'-dpng','-r300','è¡€å‹å›¾');
 
-xlswrite('data.xlsx',{'ĞÄÂÊ'},1,'A1');
+xlswrite('data.xlsx',{'å¿ƒç‡'},1,'A1');
 xlswrite('data.xlsx',HeartData,1,'A2');
 
-xlswrite('data.xlsx',{'¸ßÑªÑ¹'},1,'B1');
+xlswrite('data.xlsx',{'é«˜è¡€å‹'},1,'B1');
 xlswrite('data.xlsx',HighPressData,1,'B2');
 
-xlswrite('data.xlsx',{'µÍÑªÑ¹'},1,'C1');
+xlswrite('data.xlsx',{'ä½è¡€å‹'},1,'C1');
 xlswrite('data.xlsx',LowPressData,1,'C2');
 
 

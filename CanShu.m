@@ -1,4 +1,4 @@
-% ÑéÖ¤»ÒÉ«Ô¤²âÄ£ĞÍ¾«¶È£¬Êä³ö¸÷²ÎÊıÖµ
+% éªŒè¯ç°è‰²é¢„æµ‹æ¨¡å‹ç²¾åº¦ï¼Œè¾“å‡ºå„å‚æ•°å€¼
 clear
 x = xlsread('data.xlsx');
 for j = 1:size(x,2)
@@ -26,19 +26,19 @@ for j = 1:size(x,2)
     x=subs(x,{'a','b','x0'},{u(1),u(2),x1(1)});
     yuce1=double(subs(x,'t',[0:n-1]));
     yuce2=double(subs(x,'t',[0:n+1]));
-    digits(6),y=vpa(x); %ÎªÌá¸ßÔ¤²â¾«¶È£¬ÏÈ¼ÆËãÔ¤²âÖµ£¬ÔÙÏÔÊ¾Î¢·Ö·½³ÌµÄ½â
+    digits(6),y=vpa(x); %ä¸ºæé«˜é¢„æµ‹ç²¾åº¦ï¼Œå…ˆè®¡ç®—é¢„æµ‹å€¼ï¼Œå†æ˜¾ç¤ºå¾®åˆ†æ–¹ç¨‹çš„è§£
     
     yuce=[x0(1),diff(yuce1)];
     yuce3= [x0(1),diff(yuce2)];
     xlswrite('result.xlsx',{'yuce'},j,'E1');
     xlswrite('result.xlsx',yuce3(:),j,'E2');
-    epsilon=x0-yuce; %¼ÆËã²Ğ²î
+    epsilon=x0-yuce; %è®¡ç®—æ®‹å·®
     xlswrite('result.xlsx',{'epsilon'},j,'F1');
     xlswrite('result.xlsx', epsilon(:),j,'F2');
-    delta=abs(epsilon./x0); %¼ÆËãÏà¶ÔÎó²î
+    delta=abs(epsilon./x0); %è®¡ç®—ç›¸å¯¹è¯¯å·®
     xlswrite('result.xlsx',{'delta'},j,'G1');
     xlswrite('result.xlsx', delta(:),j,'G2');
-    rho=1-(1-0.5*u(1))/(1+0.5*u(1))*lamda; %¼ÆËã¼¶±ÈÆ«²îÖµ
+    rho=1-(1-0.5*u(1))/(1+0.5*u(1))*lamda; %è®¡ç®—çº§æ¯”åå·®å€¼
     xlswrite('result.xlsx',{'rho'},j,'H1');
     xlswrite('result.xlsx', rho(:),j,'H2');
     clear
