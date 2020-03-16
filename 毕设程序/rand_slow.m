@@ -1,0 +1,20 @@
+function s = rand_slow(s,k)
+[a,b]=size(s{1});
+sum_car_1=zeroshift(s{1},[-2,0])+zeroshift(s{1},[-1,0])+...
+    zeroshift(s{1},[1,0])+zeroshift(s{1},[2,0]);%竖直
+sum_car_2=zeroshift(s{1},[0,-2])+zeroshift(s{1},[0,-1])+...
+    zeroshift(s{1},[0,1])+zeroshift(s{1},[0,2]);%水平
+p_1=rand(a,b)<=(k(1).*abs(s{3})+k(2).*sum_car_1);
+p_2=rand(a,b)<=(k(1).*abs(s{2})+k(2).*sum_car_2);
+%右行
+right=s{1}.*(s{2}>0);
+s{2}=s{2}-p_2.*right;
+%左行
+left=s{1}.*(s{2}<0);
+s{2}=s{2}+p_2.*left;
+%下行
+down=s{1}.*(s{3}>0);
+s{3}=s{3}-p_1.*down;
+%上行
+up=s{1}.*(s{3}<0);
+s{3}=s{3}+p_1.*up;
