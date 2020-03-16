@@ -2,7 +2,7 @@
 
 ## 涉及的知识点
 - [元胞自动机-遗传算法😂](https://github.com/ExcaliburEX/Graduation-Design-and-MATLAB-Code-/blob/master/毕设程序)
-- [NSGA—II👾](https://github.com/ExcaliburEX/Graduation-Design-and-MATLAB-Code-/blob/master/毕设程序/NSGA-II)
+- [NSGA—II👾](https://github.com/ExcaliburEX/Graduation-Design-and-MATLAB-Code-/blob/master/NSGA-II)
 - [灰色预测-交通运输量自动生成🙃🙃](https://github.com/ExcaliburEX/Graduation-Design-and-MATLAB-Code-/blob/master/贲楷晨)
 - [SPSS处理调查问卷前的调查问卷预生成🤦‍♀️🤦‍♂️](https://github.com/ExcaliburEX/Graduation-Design-and-MATLAB-Code-/blob/master/李嘉诚)
 - [欧几里得坐标系计算小区距离🧔](https://github.com/ExcaliburEX/Graduation-Design-and-MATLAB-Code-/blob/master/王园园)
