@@ -1,5 +1,6 @@
 %调查问卷，总和为319
 clear
+
 N = 319;
 Q1 = rand(2,1);
 Q1 = round(N * (Q1/sum(Q1)));
